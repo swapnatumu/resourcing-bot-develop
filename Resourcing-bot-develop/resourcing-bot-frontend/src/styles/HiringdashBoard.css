@@ -1,0 +1,24 @@
+.table-header-cell {
+    font-weight: bold;
+    border: 1px solid lightgray;
+    text-align: center;
+    width: 300px;
+    color: white;
+    padding: 0;
+  }
+
+ 
+
+.candidateProfiletable-cell {
+  border: 1px solid lightgray;
+   padding: 8px ;
+   text-align: center;
+}
+
+.candidateProfiletable-cell-head{
+ 
+ font-weight: bold;
+  color: lightgray;
+   border: 1px solid lightgray;
+   text-align: center;
+}

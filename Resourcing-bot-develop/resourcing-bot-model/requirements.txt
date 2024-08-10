@@ -1,0 +1,31 @@
+pymongo
+spacy
+flask
+flask_cors
+flask_restful
+flask_pymongo
+python-dotenv
+langchain
+langchain-community
+langchain-openai
+faiss-gpu  
+faiss-cpu
+pypdf
+PyMuPDF==1.19.1
+python-docx
+torch  # For PyTorch
+transformers  # For Hugging Face Transformers
+pytz  # For timezone handling
+datasets  # If you use datasets for Hugging Face
+einops  # For tensor operations
+sentencepiece  # For tokenization in Hugging Face
+tokenizers  # For tokenization in Hugging Face
+accelerate  # For improved memory management and distributed training
+safetensors
+tenacity
+protobuf
+textract
+bson
+uuid
+docx
+torch

@@ -1,0 +1,168 @@
+[
+    {
+      "question": "Explain the concept of Covariance and Contravariance in C# and how it is applied in generic types.",
+      "options": [
+        "Covariance allows you to use a more derived type than originally specified, and Contravariance allows you to use a less derived type.",
+        "Covariance allows you to use a less derived type than originally specified, and Contravariance allows you to use a more derived type.",
+        "Covariance and Contravariance are interchangeable concepts with no specific application in C# generics.",
+        "Covariance and Contravariance are only applicable to array types, not generics."
+      ],
+      "correct_answer": "Covariance allows you to use a more derived type than originally specified, and Contravariance allows you to use a less derived type."
+    },
+
+    {
+      "question": "Describe the key differences between ASP.NET Web Forms and ASP.NET MVC.",
+      "options": [
+        "Web Forms is event-driven and follows a stateful model, while MVC is based on the model-view-controller pattern and follows a stateless model.",
+        "Web Forms is a modern approach to web development, while MVC is an outdated paradigm.",
+        "There are no significant differences between Web Forms and MVC.",
+        "Web Forms is primarily used for desktop applications, while MVC is designed for web applications."
+      ],
+      "correct_answer": "Web Forms is event-driven and follows a stateful model, while MVC is based on the model-view-controller pattern and follows a stateless model."
+    },
+
+    {
+      "question": "Explain the purpose of the 'Include' method in Entity Framework and how it can be used to optimize database queries.",
+      "options": [
+        "'Include' is used to specify the columns to be included in the SELECT statement for better performance.",
+        "'Include' is used to load related data (eager loading) along with the main entity to reduce the number of database calls.",
+        "'Include' is used for filtering data in LINQ queries.",
+        "There is no such method as 'Include' in Entity Framework."
+      ],
+      "correct_answer": "'Include' is used to load related data (eager loading) along with the main entity to reduce the number of database calls."
+    },
+
+    {
+      "question": "What are the main advantages and disadvantages of RESTful web services compared to SOAP-based web services?",
+      "options": [
+        "REST is more lightweight and scalable, while SOAP provides better security and reliability.",
+        "REST is more suitable for simple scenarios, while SOAP is recommended for complex enterprise applications.",
+        "There are no advantages or disadvantages; both REST and SOAP are equally effective.",
+        "REST and SOAP are two different names for the same technology."
+      ],
+      "correct_answer": "REST is more lightweight and scalable, while SOAP provides better security and reliability."
+    },
+
+    {
+      "question": "Explain the differences between multi-threading and parallelism in .NET and how they can be applied for performance improvement.",
+      "options": [
+        "Multi-threading and parallelism are interchangeable terms in .NET.",
+        "Multi-threading involves executing multiple threads simultaneously, while parallelism involves breaking a task into smaller subtasks that can be executed concurrently.",
+        "Multi-threading and parallelism both refer to the same concept of running code concurrently on multiple processors.",
+        "Multi-threading and parallelism are concepts that are not applicable in .NET development."
+      ],
+      "correct_answer": "Multi-threading involves executing multiple threads simultaneously, while parallelism involves breaking a task into smaller subtasks that can be executed concurrently."
+    },
+
+    {
+      "question": "Describe the principles of SOLID design and how they contribute to writing maintainable and scalable code.",
+      "options": [
+        "SOLID principles include Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.",
+        "SOLID principles are outdated and not relevant in modern software development.",
+        "SOLID principles are only applicable to functional programming languages.",
+        "There is no such concept as SOLID design principles."
+      ],
+      "correct_answer": "SOLID principles include Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion."
+    },
+
+    {
+      "question": "Explain common security practices in ASP.NET applications, including input validation, output encoding, and prevention of common security vulnerabilities.",
+      "options": [
+        "Security practices are unnecessary in ASP.NET applications as the framework automatically handles all security concerns.",
+        "Input validation ensures that user inputs meet certain criteria, output encoding prevents cross-site scripting (XSS) attacks, and practices such as parameterized queries help prevent SQL injection.",
+        "Security practices are only relevant in client-side scripting, not in server-side ASP.NET applications.",
+        "Security practices in ASP.NET are limited to the use of firewalls and antivirus software."
+      ],
+      "correct_answer": "Input validation ensures that user inputs meet certain criteria, output encoding prevents cross-site scripting (XSS) attacks, and practices such as parameterized queries help prevent SQL injection."
+    },
+
+    {
+      "question": "Explain the main challenges and benefits of implementing microservices architecture in a distributed system.",
+      "options": [
+        "Microservices architecture simplifies deployment and promotes easier maintenance, but it introduces challenges related to inter-service communication and data consistency.",
+        "Microservices architecture is not suitable for distributed systems and should only be used in monolithic applications.",
+        "There are no challenges in implementing microservices architecture; it is a straightforward process.",
+        "Microservices architecture is focused on centralized control, making it unsuitable for distributed systems."
+      ],
+      "correct_answer": "Microservices architecture simplifies deployment and promotes easier maintenance, but it introduces challenges related to inter-service communication and data consistency."
+    },
+
+    {
+      "question": "Explain the differences between unit testing, integration testing, and end-to-end testing, and describe situations where each type of testing is most beneficial.",
+      "options": [
+        "Unit testing is performed by developers and focuses on testing individual components, integration testing verifies the interactions between components, and end-to-end testing simulates real user scenarios.",
+        "All testing types are interchangeable and can be used in any situation.",
+        "Unit testing is only applicable in isolated environments, integration testing is for deployment scenarios, and end-to-end testing is for debugging purposes.",
+        "There is no need for testing in software development; developers should rely on manual testing only."
+      ],
+      "correct_answer": "Unit testing is performed by developers and focuses on testing individual components, integration testing verifies the interactions between components, and end-to-end testing simulates real user scenarios."
+    },
+
+    {
+      "question": "Explain the concept of CORS (Cross-Origin Resource Sharing) and how it is handled in ASP.NET Core applications.",
+      "options": [
+        "CORS allows resources on a web page to be requested from another domain outside the domain from which the resource originated.",
+        "CORS is only relevant in client-side scripting and has no impact on server-side ASP.NET Core applications.",
+        "ASP.NET Core applications do not support CORS; it is only applicable to ASP.NET Framework.",
+        "CORS is a security vulnerability and should be disabled in all applications."
+      ],
+      "correct_answer": "CORS allows resources on a web page to be requested from another domain outside the domain from which the resource originated."
+    },
+
+    {
+      "question": "Explain the concept of eventual consistency in distributed systems and how it is achieved.",
+      "options": [
+        "Eventual consistency ensures that all nodes in a distributed system have the same data at the same time.",
+        "Eventual consistency guarantees immediate consistency across all nodes in a distributed system.",
+        "Eventual consistency allows for temporary inconsistencies but ensures that the system will converge to a consistent state over time.",
+        "Eventual consistency is a term used in theoretical discussions but has no practical application in distributed systems."
+      ],
+      "correct_answer": "Eventual consistency allows for temporary inconsistencies but ensures that the system will converge to a consistent state over time."
+    },
+
+    {
+      "question": "Explain the purpose of the 'Test Doubles' concept in advanced testing techniques and provide examples of different types of test doubles.",
+      "options": [
+        "Test Doubles are used to replace actual dependencies with fake implementations to isolate the code being tested.",
+        "Test Doubles are only used in performance testing scenarios.",
+        "There is no need for Test Doubles in modern testing practices.",
+        "Test Doubles are only relevant for hardware testing, not for software testing."
+      ],
+      "correct_answer": "Test Doubles are used to replace actual dependencies with fake implementations to isolate the code being tested."
+    },
+
+    {
+      "question": "Explain the role of a reverse proxy in microservices architecture and how it can improve system performance and security.",
+      "options": [
+        "A reverse proxy is used to forward requests from clients to microservices, improving performance by reducing latency and enhancing security by protecting internal services.",
+        "A reverse proxy is only used for load balancing and has no impact on microservices architecture.",
+        "Microservices architecture does not involve the use of reverse proxies; it relies on direct communication between services.",
+        "A reverse proxy is used to block incoming requests to microservices, enhancing security by preventing unauthorized access."
+      ],
+      "correct_answer": "A reverse proxy is used to forward requests from clients to microservices, improving performance by reducing latency and enhancing security by protecting internal services."
+    },
+
+    {
+      "question": "Explain the concept of 'Deadlocks' in concurrent programming and provide strategies to prevent and handle deadlocks.",
+      "options": [
+        "Deadlocks occur when two or more threads are waiting for each other to release resources, resulting in a state where no thread can proceed.",
+        "Deadlocks are a normal part of concurrent programming and do not require prevention or handling.",
+        "There is no concept of deadlocks in concurrent programming.",
+        "Deadlocks can only occur in single-threaded applications."
+      ],
+      "correct_answer": "Deadlocks occur when two or more threads are waiting for each other to release resources, resulting in a state where no thread can proceed."
+    },
+    
+    { 
+        "question": "Explain the principles of the SOLID design pattern and how they apply to .NET development.",
+        "options": [
+          "Single Responsibility Principle",
+          "Open/Closed Principle",
+          "Liskov Substitution Principle",
+          "Interface Segregation Principle",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above"
+    }
+  ]
+  

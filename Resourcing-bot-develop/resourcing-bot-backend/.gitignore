@@ -1,0 +1,34 @@
+# Node.js dependencies
+node_modules/
+
+# Compiled and generated files
+dist/
+build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories (for Yarn)
+.pnp/
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+
+# Editor directories and files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db

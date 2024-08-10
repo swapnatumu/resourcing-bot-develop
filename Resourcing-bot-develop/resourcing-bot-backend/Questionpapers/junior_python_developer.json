@@ -1,0 +1,153 @@
+[
+    {
+      "question": "What is Python?",
+      "options": [
+        "A snake species",
+        "A programming language",
+        "A web browser",
+        "An operating system"
+      ],
+      "correct_answer": "A programming language"
+    },
+    {
+      "question": "How do you print 'Hello, World!' in Python?",
+      "options": [
+        "echo 'Hello, World!'",
+        "print('Hello, World!')",
+        "console.log('Hello, World!')",
+        "printf('Hello, World!')"
+      ],
+      "correct_answer": "print('Hello, World!')"
+    },
+    {
+      "question": "What is a variable in Python?",
+      "options": [
+        "A reserved keyword",
+        "A container for storing data values",
+        "A Python module",
+        "A loop structure"
+      ],
+      "correct_answer": "A container for storing data values"
+    },
+    {
+      "question": "How do you comment a single line in Python?",
+      "options": [
+        "// This is a comment",
+        "# This is a comment",
+        "/* This is a comment */",
+        "REM This is a comment"
+      ],
+      "correct_answer": "# This is a comment"
+    },
+    {
+      "question": "What is the purpose of the 'if' statement in Python?",
+      "options": [
+        "To create a loop",
+        "To define a function",
+        "To perform a conditional execution of code",
+        "To print text to the console"
+      ],
+      "correct_answer": "To perform a conditional execution of code"
+    },
+    {
+      "question": "What is a list in Python?",
+      "options": [
+        "A collection of ordered elements",
+        "A way to define a function",
+        "A Python keyword",
+        "A mathematical operation"
+      ],
+      "correct_answer": "A collection of ordered elements"
+    },
+    {
+      "question": "How do you define a function in Python?",
+      "options": [
+        "function my_function():",
+        "def my_function():",
+        "define my_function():",
+        "func my_function():"
+      ],
+      "correct_answer": "def my_function():"
+    },
+    {
+      "question": "What is the purpose of the 'for' loop in Python?",
+      "options": [
+        "To perform a conditional execution of code",
+        "To create a function",
+        "To define a variable",
+        "To iterate over a sequence of elements"
+      ],
+      "correct_answer": "To iterate over a sequence of elements"
+    },
+    {
+      "question": "How do you check the length of a list in Python?",
+      "options": [
+        "len(my_list)",
+        "length(my_list)",
+        "count(my_list)",
+        "size(my_list)"
+      ],
+      "correct_answer": "len(my_list)"
+    },
+    {
+      "question": "What is the purpose of the 'else' statement in Python?",
+      "options": [
+        "To create an alternative loop",
+        "To handle exceptions",
+        "To perform a block of code when the 'if' condition is not true",
+        "To define a variable"
+      ],
+      "correct_answer": "To perform a block of code when the 'if' condition is not true"
+    },
+    {
+      "question": "What is the output of the following code? `print(3 + '2')`",
+      "options": [
+        "5",
+        "32",
+        "Error",
+        "6"
+      ],
+      "correct_answer": "Error"
+    },
+    {
+      "question": "What is the purpose of the 'return' statement in a function?",
+      "options": [
+        "To print a value to the console",
+        "To terminate the program",
+        "To return a value from a function",
+        "To create a loop"
+      ],
+      "correct_answer": "To return a value from a function"
+    },
+    {
+      "question": "What is the correct way to import the 'random' module in Python?",
+      "options": [
+        "include random",
+        "import random",
+        "require random",
+        "from random import"
+      ],
+      "correct_answer": "import random"
+    },
+    {
+      "question": "How do you open a file named 'example.txt' for reading in Python?",
+      "options": [
+        "file = open('example.txt', 'r')",
+        "file = read('example.txt')",
+        "file = create('example.txt')",
+        "file = read_file('example.txt')"
+      ],
+      "correct_answer": "file = open('example.txt', 'r')"
+    },
+    {
+      "question": "What is the purpose of the 'append' method in a list in Python?",
+      "options": [
+        "To remove an element from the list",
+        "To add an element to the end of the list",
+        "To reverse the order of elements in the list",
+        "To check if an element exists in the list"
+      ],
+      "correct_answer": "To add an element to the end of the list"
+    }
+  ]
+  

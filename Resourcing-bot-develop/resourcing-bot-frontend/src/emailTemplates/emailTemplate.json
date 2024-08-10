@@ -1,0 +1,39 @@
+{
+    "approvalEmail": {
+      "subject": "Your Role has been Approved!",
+      "body": "<p>Hi, congratulations! Your Resourcing Bot role has been approved by the admin. You can now start managing job applications and contributing to the hiring process.</p><p>Please click the link below to access the login page:</p><p><a href=\"${loginUrl}\">Click here to login</a></p><p>Best regards,<br>Team</p>"
+    },
+    "rejectionEmail": {
+        "subject": "Your Role has been Rejected!",
+        "body": "<p>Dear User, we regret to inform you that your Resourcing Bot role has been rejected by the admin. If you have any questions, please contact support.</p>"
+      },
+
+
+      "registration": {
+        "subject": "New User Registration: ${userType} ",
+        "body": "<p>A new ${userType} with email ${userEmail} has registered. Please review and take necessary actions.</p><p>Please click the link below to access the login page:</p><p><a href=\"${loginUrl}\">Click here to login</a></p><p>Best regards,</p>"
+      },
+  
+      
+        "recruiterNotification": {
+          "subject": "New Job Assignment on Resourcing Bot!",
+          "body": "Hi Recruiter, a new job has been created, and you've been assigned as the recruiter. Log in to view and manage the details."
+        },
+        "interviewerNotification": {
+          "subject": "New Interview Assignment on Resourcing Bot!",
+          "body": "Hello Interviewer, exciting news! A new job has been created, and you've been assigned as the interviewer. Log in to view and schedule interviews."
+        },
+        "interviewFeedback": {
+            "subject": "Interview Feedback for USER_EMAIL",
+            "body": "<p>Hi , the interview for USER_EMAIL has been completed. Please log in to view the feedback and proceed with the next steps.</p><p>Please click the link below to access the login page:</p><p><a href=\"${loginUrl}\">Click here to login</a></p><p>Best regards,</p>"
+          },
+            "resetPasswordSuccess": {
+              "subject": "Password Reset Successful",
+              "body": "Your Password has been reset successfully. Now you can login with your new Password."
+            },
+           "sendOTP": {
+              "subject": "Password Reset OTP",
+              "body": "Your OTP for password reset is: ${otp}"
+  }
+}
+  

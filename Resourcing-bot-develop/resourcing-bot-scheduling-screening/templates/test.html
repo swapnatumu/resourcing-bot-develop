@@ -1,0 +1,405 @@
+
+<!-- working code displayin questionpaper from db -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        .question-container {
+            margin-bottom: 10px;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        #timer {
+            margin-top: 10px;
+            font-size: 28px;
+            color: red;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+
+        #test-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60%;
+        }
+
+        .question-container {
+            margin-bottom: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        #video-container,
+        #audio-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 100%;
+        }
+
+        #camera-preview,
+        #microphone-preview {
+            width: 50%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #next-button,
+        #submit-test {
+            margin-top: 270px;
+            position: absolute;
+            width: 5%;
+            height: 5%;
+            background-color: rgb(97, 95, 230);
+            color: black;
+            font-size: 18px;
+        }
+
+        #prev-button {
+            margin-top: 270px;
+            position: fixed;
+            width: 5%;
+            height: 5%;
+            background-color: rgb(97, 95, 230);
+            color: black;
+            display: none;
+            left: 40%;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Technical Proficiency Test</h1>
+    <div id="timer">Time Remaining: <span id="minutes">10</span>:<span id="seconds">00</span></div>
+    {% if question_option_pairs %}
+    <div id="test-container"></div>
+    <button id="prev-button" style="display: grid;" disabled>Previous</button>
+    <button id="next-button" disabled>Next</button>
+    <button id="submit-test" style="display: none;">Submit Test</button>
+
+    <div id="video-container">
+        <video id="camera-preview" playsinline autoplay></video>
+    </div>
+
+    <div id="audio-container">
+        <audio id="microphone-preview" playsinline autoplay></audio>
+    </div>
+
+    <script>
+        var question_option_pairs = {{ question_option_pairs | tojson | safe }};
+        var selectedAnswers = Array(question_option_pairs.length).fill(null);
+        var savedAnswers = Array(question_option_pairs.length).fill(null);
+        var currentQuestionIndex = 0;
+        var minutes = 10;
+        var seconds = 0;
+
+        function renderQuestionWithOptions(questionOptionPair, index) {
+            var container = document.getElementById('test-container');
+            var questionContainer = document.createElement('div');
+            questionContainer.classList.add('question-container');
+
+            var questionText = document.createElement('p');
+            questionText.innerHTML = (index + 1) + '. ' + questionOptionPair[0];
+            questionContainer.appendChild(questionText);
+
+            questionOptionPair[1].forEach(function (option, i) {
+                var radioId = 'option_' + index + '_' + i;
+
+                var radio = document.createElement('input');
+                radio.type = 'radio';
+                radio.name = 'answers' + index;
+                radio.value = option;
+                radio.id = radioId;
+
+                var label = document.createElement('label');
+                label.setAttribute('for', radioId);
+                label.appendChild(document.createTextNode(option));
+
+                var alphabetSpan = document.createElement('span');
+                alphabetSpan.className = 'alphabet';
+                alphabetSpan.appendChild(document.createTextNode(String.fromCharCode('A'.charCodeAt(0) + i) + '.'));
+
+                label.insertBefore(alphabetSpan, label.firstChild);
+
+                questionContainer.appendChild(radio);
+                questionContainer.appendChild(label);
+
+                var lineBreak = document.createElement('br');
+                questionContainer.appendChild(lineBreak);
+
+                radio.addEventListener('change', function () {
+                    selectedAnswers[index] = option;
+                    savedAnswers[index] = option;
+                    document.getElementById('next-button').disabled = false;
+                });
+
+                if (savedAnswers[index] === option) {
+                    radio.checked = true;
+                }
+            });
+
+            questionContainer.setAttribute('data-question-id', index);
+            container.appendChild(questionContainer);
+        }
+
+        function clearQuestionContainer() {
+            var container = document.getElementById('test-container');
+            container.innerHTML = '';
+        }
+
+        function startTimer() {
+            var timerInterval = setInterval(function () {
+                if (minutes === 0 && seconds === 0) {
+                    clearInterval(timerInterval);
+                    submitTest();
+                } else {
+                    if (seconds === 0) {
+                        minutes--;
+                        seconds = 59;
+                    } else {
+                        seconds--;
+                    }
+                    document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
+                    document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+                }
+            }, 1000);
+        }
+
+        function updateButtonVisibility() {
+            var prevButton = document.getElementById('prev-button');
+            var nextButton = document.getElementById('next-button');
+            var submitButton = document.getElementById('submit-test');
+
+            prevButton.style.display = currentQuestionIndex === 0 ? 'none' : 'block';
+            prevButton.disabled = currentQuestionIndex === 0;
+            nextButton.disabled = currentQuestionIndex === question_option_pairs.length - 1;
+
+            if (currentQuestionIndex < question_option_pairs.length - 1) {
+                submitButton.style.display = 'none';
+                nextButton.style.display = 'block';
+            } else {
+                submitButton.style.display = 'block';
+                nextButton.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var prevButton = document.getElementById('prev-button');
+            var nextButton = document.getElementById('next-button');
+            var submitButton = document.getElementById('submit-test');
+
+            function requestMediaPermissions() {
+                return navigator.mediaDevices.getUserMedia({
+                    video: true,
+                    audio: true
+                });
+            }
+
+            function startMediaStream() {
+                requestMediaPermissions()
+                    .then((stream) => {
+                        const videoElement = document.getElementById('camera-preview');
+                        const audioElement = document.getElementById('microphone-preview');
+
+                        videoElement.srcObject = stream;
+                        audioElement.srcObject = stream;
+
+                        // User has allowed camera and microphone, so display question paper
+                        showQuestionPaper();
+                    })
+                    .catch((error) => {
+                        console.error('Error accessing camera and microphone:', error);
+                    });
+            }
+
+            function showQuestionPaper() {
+                // Render the first question when the user allows access
+                renderQuestionWithOptions(question_option_pairs[currentQuestionIndex], currentQuestionIndex);
+                updateButtonVisibility();
+            }
+
+            // Check if getUserMedia is supported
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                // Display question paper only after obtaining media permissions
+                startMediaStream();
+            } else {
+                // Handle the case where getUserMedia is not supported
+                console.error('getUserMedia is not supported in this browser');
+            }
+
+            prevButton.addEventListener('click', function () {
+                currentQuestionIndex--;
+                clearQuestionContainer();
+
+                if (currentQuestionIndex >= 0) {
+                    renderQuestionWithOptions(question_option_pairs[currentQuestionIndex], currentQuestionIndex);
+                }
+
+                updateButtonVisibility();
+            });
+
+            renderQuestionWithOptions(question_option_pairs[currentQuestionIndex], currentQuestionIndex);
+
+            nextButton.addEventListener('click', function () {
+                if (selectedAnswers[currentQuestionIndex] !== null) {
+                    currentQuestionIndex++;
+                    clearQuestionContainer();
+
+                    if (currentQuestionIndex < question_option_pairs.length) {
+                        renderQuestionWithOptions(question_option_pairs[currentQuestionIndex], currentQuestionIndex);
+                        updateButtonVisibility();
+                    }
+                }
+            });
+
+            submitButton.addEventListener('click', function () {
+                var confirmSubmit = confirm('Are you sure you want to submit the test?');
+
+                if (confirmSubmit) {
+                    submitTest();
+                }
+            });
+
+            updateButtonVisibility();
+            startTimer();
+        });
+	//uncomment below code and comment above related part to not display 1st question 2 times while testing in localaddress or localsystem
+    
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     var prevButton = document.getElementById('prev-button');
+        //     var nextButton = document.getElementById('next-button');
+        //     var submitButton = document.getElementById('submit-test');
+
+        //     function requestMediaPermissions() {
+        //         return navigator.mediaDevices.getUserMedia({
+        //             video: true,
+        //             audio: true
+        //         });
+        //     }
+
+        //     function startMediaStream() {
+        //         requestMediaPermissions()
+        //             .then((stream) => {
+        //                 const videoElement = document.getElementById('camera-preview');
+        //                 const audioElement = document.getElementById('microphone-preview');
+
+        //                 videoElement.srcObject = stream;
+        //                 audioElement.srcObject = stream;
+
+        //                 // User has allowed camera and microphone, so display question paper
+        //                 showQuestionPaper();
+        //             })
+        //             .catch((error) => {
+        //                 console.error('Error accessing camera and microphone:', error);
+        //             });
+        //     }
+
+        //     function showQuestionPaper() {
+        //         // Render the first question when the user allows access
+        //         renderQuestionWithOptions(question_option_pairs[currentQuestionIndex], currentQuestionIndex);
+        //         updateButtonVisibility();
+        //     }
+
+        //     // Check if getUserMedia is supported
+        //     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        //         // Display question paper only after obtaining media permissions
+        //         startMediaStream();
+        //     } else {
+        //         // Handle the case where getUserMedia is not supported
+        //         console.error('getUserMedia is not supported in this browser');
+        //     }
+
+        //     prevButton.addEventListener('click', function () {
+        //         currentQuestionIndex--;
+        //         clearQuestionContainer();
+
+        //         if (currentQuestionIndex >= 0) {
+        //             renderQuestionWithOptions(question_option_pairs[currentQuestionIndex], currentQuestionIndex);
+        //         }
+
+        //         updateButtonVisibility();
+        //     });
+
+        //     nextButton.addEventListener('click', function () {
+        //         if (selectedAnswers[currentQuestionIndex] !== null) {
+        //             currentQuestionIndex++;
+        //             clearQuestionContainer();
+
+        //             if (currentQuestionIndex < question_option_pairs.length) {
+        //                 renderQuestionWithOptions(question_option_pairs[currentQuestionIndex], currentQuestionIndex);
+        //                 updateButtonVisibility();
+        //             }
+        //         }
+        //     });
+
+        //     submitButton.addEventListener('click', function () {
+        //         var confirmSubmit = confirm('Are you sure you want to submit the test?');
+
+        //         if (confirmSubmit) {
+        //             submitTest();
+        //         }
+        //     });
+
+        //     updateButtonVisibility();
+        //     startTimer();
+        // });
+
+        function submitTest() {
+            var data = {
+                answers: selectedAnswers,
+                question_option_pairs: question_option_pairs
+            };
+
+            fetch('/submit-test', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+                .then(response => response.json())
+                .then(result => {
+                    if (result.message === 'success') {
+                        window.location.href = result.redirect_url;
+                    } else {
+                        window.location.href = result.redirect_url;
+                    }
+                });
+        }
+    </script>
+
+    <style>
+        .alphabet {
+            margin-right: 5px;
+            font-weight: bold;
+        }
+    </style>
+    {% else %}
+    <p>No questions available.</p>
+    {% endif %}
+</body>
+
+</html>

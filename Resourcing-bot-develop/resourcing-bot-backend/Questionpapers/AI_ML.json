@@ -1,0 +1,153 @@
+[
+    {
+      "question": "Which of the following is not a characteristic of a good machine learning model?",
+      "options": [
+        "High variance",
+        "High bias",
+        "Low complexity",
+        "High generalization"
+      ],
+      "correct_answer": "High bias"
+    },
+    {
+      "question": "In the context of reinforcement learning, what is the primary purpose of the reward function?",
+      "options": [
+        "To initialize the value function",
+        "To determine the state transitions",
+        "To provide feedback to the agent about the actions taken",
+        "To calculate the policy gradient"
+      ],
+      "correct_answer": "To provide feedback to the agent about the actions taken"
+    },
+    {
+      "question": "Which algorithm is used for dimensionality reduction and is particularly useful for reducing the dimensionality of large datasets while retaining most of the variance?",
+      "options": [
+        "K-Means Clustering",
+        "Principal Component Analysis (PCA)",
+        "Support Vector Machines (SVM)",
+        "Decision Trees"
+      ],
+      "correct_answer": "Principal Component Analysis (PCA)"
+    },
+    {
+      "question": "Which of the following techniques is used to handle the problem of overfitting in machine learning models?",
+      "options": [
+        "Increasing the size of the training data",
+        "Using a more complex model",
+        "Decreasing the number of features",
+        "Adding more hidden layers to a neural network"
+      ],
+      "correct_answer": "Increasing the size of the training data"
+    },
+    {
+      "question": "In the context of neural networks, what does the term 'backpropagation' refer to?",
+      "options": [
+        "The process of initializing the weights of the network",
+        "The forward propagation of the input data through the network",
+        "The process of updating the weights based on the error gradient",
+        "The activation function applied to each neuron"
+      ],
+      "correct_answer": "The process of updating the weights based on the error gradient"
+    },
+    {
+      "question": "Which method is used for evaluating the performance of a classification model when the dataset is imbalanced?",
+      "options": [
+        "Accuracy",
+        "Precision and Recall",
+        "Mean Squared Error (MSE)",
+        "R-Squared (R²)"
+      ],
+      "correct_answer": "Precision and Recall"
+    },
+    {
+      "question": "In the context of natural language processing (NLP), what does the term 'word embedding' refer to?",
+      "options": [
+        "A method for generating synthetic data",
+        "A technique for visualizing the structure of a text corpus",
+        "A representation of words in a continuous vector space",
+        "A way to perform tokenization of text data"
+      ],
+      "correct_answer": "A representation of words in a continuous vector space"
+    },
+    {
+      "question": "What is the primary difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning does not",
+        "Supervised learning is used for clustering, while unsupervised learning is used for regression",
+        "Unsupervised learning requires labeled data, while supervised learning does not",
+        "There is no difference between supervised and unsupervised learning"
+      ],
+      "correct_answer": "Supervised learning requires labeled data, while unsupervised learning does not"
+    },
+    {
+      "question": "What does the term 'overfitting' refer to in machine learning models?",
+      "options": [
+        "The model performs well on training data but poorly on unseen data",
+        "The model performs well on unseen data but poorly on training data",
+        "The model has too few parameters",
+        "The model is too simple to capture the underlying patterns in the data"
+      ],
+      "correct_answer": "The model performs well on training data but poorly on unseen data"
+    },
+    {
+      "question": "Which optimization algorithm is commonly used to minimize the loss function in deep learning models?",
+      "options": [
+        "Gradient Descent",
+        "K-Means Clustering",
+        "Principal Component Analysis (PCA)",
+        "Apriori Algorithm"
+      ],
+      "correct_answer": "Gradient Descent"
+    },
+    {
+      "question": "What is the purpose of regularization in machine learning?",
+      "options": [
+        "To increase the model complexity",
+        "To reduce the model complexity and prevent overfitting",
+        "To handle missing data",
+        "To improve the speed of the algorithm"
+      ],
+      "correct_answer": "To reduce the model complexity and prevent overfitting"
+    },
+    {
+      "question": "Which technique is used to handle missing data in a dataset?",
+      "options": [
+        "Imputation",
+        "Normalization",
+        "Feature Selection",
+        "Dimensionality Reduction"
+      ],
+      "correct_answer": "Imputation"
+    },
+    {
+      "question": "In a convolutional neural network (CNN), what is the primary function of the convolutional layer?",
+      "options": [
+        "To perform data normalization",
+        "To detect patterns and features in the input data",
+        "To combine the features from different layers",
+        "To perform data augmentation"
+      ],
+      "correct_answer": "To detect patterns and features in the input data"
+    },
+    {
+      "question": "Which metric is commonly used to evaluate the performance of regression models?",
+      "options": [
+        "Accuracy",
+        "Mean Absolute Error (MAE)",
+        "F1 Score",
+        "Precision"
+      ],
+      "correct_answer": "Mean Absolute Error (MAE)"
+    },
+    {
+      "question": "What is the purpose of the 'kernel trick' in Support Vector Machines (SVM)?",
+      "options": [
+        "To increase the computational efficiency of the algorithm",
+        "To transform data into a higher-dimensional space to make it linearly separable",
+        "To reduce the number of features in the dataset",
+        "To perform cross-validation"
+      ],
+      "correct_answer": "To transform data into a higher-dimensional space to make it linearly separable"
+    }
+  ]
+  

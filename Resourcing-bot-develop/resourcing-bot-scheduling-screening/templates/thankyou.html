@@ -1,0 +1,85 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        ul {
+            text-align: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 650px; /* Adjust this value to increase or decrease the space */
+}
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 25px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Thank You!</h1>
+    <p>Your response has been received.</p>
+
+    <h2>Instructions To Take the Test:</h2>
+    <ul>
+        <li>1. This test is timed and will last 10 minutes. A timer will be visible during the test.</li>
+        <li>2. The test consists of multiple-choice questions. Please read each question carefully.</li>
+        <li>3. Ensure you have a stable internet connection.</li>
+        <li>4. Do not copy answers from others or engage in any form of cheating.</li>
+        <li>5. If you encounter technical issues, contact <a href="mailto:example@gmail.com">example@gmail.com</a>.</li>
+        <li>6. Carefully review these instructions before starting the test.</li>
+    </ul>
+
+    <h2>Good Luck!</h2>
+    <p>click the below button to start the test</p>
+
+    <button onclick="redirectToLogin()">START</button>
+    <script>
+        function redirectToLogin() {
+            // Redirect to the login.html page
+            window.location.href = '/login';
+            
+        }
+    </script>
+
+   
+
+</body>
+
+</html>

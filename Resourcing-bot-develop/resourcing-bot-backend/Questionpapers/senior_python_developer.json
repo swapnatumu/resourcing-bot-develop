@@ -1,0 +1,153 @@
+[
+    {
+      "question": "Explain the Global Interpreter Lock (GIL) in Python. How does it impact multithreading?",
+      "options": [
+        "The GIL ensures thread safety in Python by allowing only one thread to execute at a time.",
+        "The GIL allows multiple threads to execute simultaneously, ensuring efficient multithreading.",
+        "The GIL is not relevant to Python multithreading.",
+        "The GIL can be disabled to improve multithreading performance."
+      ],
+      "correct_answer": "The GIL ensures thread safety in Python by allowing only one thread to execute at a time."
+    },
+    {
+      "question": "Discuss the differences between Python 2 and Python 3. Why should developers migrate to Python 3?",
+      "options": [
+        "Python 3 has a simpler syntax and better performance.",
+        "Python 3 introduces new features like type hints and asynchronous programming.",
+        "Python 2 has reached its end-of-life, with no further support or updates.",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    },
+    {
+      "question": "Explain the concept of decorators in Python and provide an example of how they can be used.",
+      "options": [
+        "Decorators are used to add extra functionality to functions and methods.",
+        "Decorators are used only for class-based programming in Python.",
+        "Decorators are a feature exclusive to Python 3.",
+        "There is no such concept as decorators in Python."
+      ],
+      "correct_answer": "Decorators are used to add extra functionality to functions and methods."
+    },
+    {
+      "question": "What are metaclasses in Python? Provide a scenario where metaclasses are useful.",
+      "options": [
+        "Metaclasses are classes of classes and are used to customize class creation.",
+        "Metaclasses are used for memory management in Python.",
+        "Metaclasses are specific to Python 2.",
+        "There is no need for metaclasses in modern Python development."
+      ],
+      "correct_answer": "Metaclasses are classes of classes and are used to customize class creation."
+    },
+    {
+      "question": "Explain the purpose of the Python `asyncio` module and how it is used for asynchronous programming.",
+      "options": [
+        "`asyncio` is used for handling file I/O operations in Python.",
+        "`asyncio` provides support for asynchronous programming using coroutines and event loops.",
+        "`asyncio` is deprecated, and developers should use multithreading instead.",
+        "There is no such module as `asyncio` in Python."
+      ],
+      "correct_answer": "`asyncio` provides support for asynchronous programming using coroutines and event loops."
+    },
+    {
+      "question": "Discuss the differences between shallow copy and deep copy in Python.",
+      "options": [
+        "A shallow copy creates a new object, but does not create copies of nested objects.",
+        "A deep copy creates a new object along with copies of all nested objects.",
+        "Both shallow copy and deep copy create exact replicas of objects.",
+        "Shallow copy and deep copy are terms used interchangeably in Python."
+      ],
+      "correct_answer": "A deep copy creates a new object along with copies of all nested objects."
+    },
+    {
+      "question": "Explain the purpose of the `collections` module in Python. Provide an example of its usage.",
+      "options": [
+        "`collections` module provides specialized data structures like namedtuples and OrderedDict.",
+        "`collections` module is used for handling network connections in Python.",
+        "`collections` module is specific to Python 2.",
+        "There is no such module as `collections` in Python."
+      ],
+      "correct_answer": "`collections` module provides specialized data structures like namedtuples and OrderedDict."
+    },
+    {
+      "question": "What is the Global Exception Handling mechanism in Python? How can it be implemented?",
+      "options": [
+        "Global Exception Handling catches all exceptions that occur in a Python program.",
+        "Global Exception Handling is only applicable to web applications.",
+        "Global Exception Handling is a deprecated feature in Python.",
+        "There is no concept of Global Exception Handling in Python."
+      ],
+      "correct_answer": "Global Exception Handling catches all exceptions that occur in a Python program."
+    },
+    {
+      "question": "Explain the role of the Python `__slots__` attribute in classes. When is it useful?",
+      "options": [
+        "`__slots__` is used for defining slots in a GUI application.",
+        "`__slots__` is used for memory optimization by restricting the attributes a class can have.",
+        "`__slots__` is specific to Python 2.",
+        "There is no such attribute as `__slots__` in Python."
+      ],
+      "correct_answer": "`__slots__` is used for memory optimization by restricting the attributes a class can have."
+    },
+    {
+      "question": "Discuss the advantages and disadvantages of using Python for web development compared to other languages.",
+      "options": [
+        "Advantages include readability, a large standard library, and a strong community.",
+        "Disadvantages include slower execution speed compared to compiled languages.",
+        "Python is not suitable for web development.",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    },
+    {
+      "question": "Explain the concept of Python decorators and how they can be used to measure the execution time of a function.",
+      "options": [
+        "Decorators are used to add extra functionality to functions.",
+        "To measure the execution time, a decorator can record the start and end times of a function.",
+        "Both A and B.",
+        "There is no concept of decorators in Python."
+      ],
+      "correct_answer": "Both A and B."
+    },
+    {
+      "question": "Discuss the purpose of the Python `unittest` module for testing. Provide an example of a unit test.",
+      "options": [
+        "`unittest` is used for network communication in Python.",
+        "`unittest` is a module for writing and running tests for Python code.",
+        "`unittest` is specific to Python 2.",
+        "There is no such module as `unittest` in Python."
+      ],
+      "correct_answer": "`unittest` is a module for writing and running tests for Python code."
+    },
+    {
+      "question": "Explain the concept of a Python generator and provide an example of its usage.",
+      "options": [
+        "A generator is a function that returns an iterable sequence of values.",
+        "Generators are only applicable to Python 2.",
+        "A generator is a data type for storing large datasets.",
+        "There is no such concept as a Python generator."
+      ],
+      "correct_answer": "A generator is a function that returns an iterable sequence of values."
+    },
+    {
+      "question": "What is the purpose of the `*args` and `**kwargs` in Python function definitions?",
+      "options": [
+        "`*args` is used for specifying keyword arguments in a function.",
+        "`*args` allows a function to accept a variable number of positional arguments.",
+        "`**kwargs` is used for unpacking arguments in a function.",
+        "Both `*args` and `**kwargs` are used for the same purpose."
+      ],
+      "correct_answer": "`*args` allows a function to accept a variable number of positional arguments."
+    },
+    {
+      "question": "Discuss the benefits and drawbacks of using Python for machine learning and data science.",
+      "options": [
+        "Benefits include a rich ecosystem of libraries like NumPy and scikit-learn.",
+        "Drawbacks include lower performance compared to languages like C++ in certain scenarios.",
+        "Python is not suitable for machine learning and data science.",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    }
+  ]
+  

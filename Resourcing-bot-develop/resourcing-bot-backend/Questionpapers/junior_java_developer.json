@@ -1,0 +1,154 @@
+[
+    {
+      "question": "What is Java?",
+      "options": [
+        "A type of coffee",
+        "A programming language",
+        "An operating system",
+        "A web browser"
+      ],
+      "correct_answer": "A programming language"
+    },
+    {
+      "question": "How do you print 'Hello, World!' in Java?",
+      "options": [
+        "echo('Hello, World!');",
+        "console.log('Hello, World!');",
+        "System.out.println('Hello, World!');",
+        "print('Hello, World!');"
+      ],
+      "correct_answer": "System.out.println('Hello, World!');"
+    },
+    {
+      "question": "What is a variable in Java?",
+      "options": [
+        "A reserved keyword",
+        "A container for storing data values",
+        "A loop structure",
+        "A method definition"
+      ],
+      "correct_answer": "A container for storing data values"
+    },
+    {
+      "question": "How do you declare an integer variable named 'age' in Java?",
+      "options": [
+        "int age = 25;",
+        "integer age = 25;",
+        "age = 25;",
+        "var age = 25;"
+      ],
+      "correct_answer": "int age = 25;"
+    },
+ 
+    {
+      "question": "What is an array in Java?",
+      "options": [
+        "A collection of unordered elements",
+        "A way to define a function",
+        "A reserved keyword",
+        "A mathematical operation"
+      ],
+      "correct_answer": "A collection of unordered elements"
+    },
+    {
+      "question": "How do you define a method in Java?",
+      "options": [
+        "function myMethod() {}",
+        "def myMethod() {}",
+        "method myMethod() {}",
+        "void myMethod() {}"
+      ],
+      "correct_answer": "void myMethod() {}"
+    },
+    {
+      "question": "What is the purpose of the 'for' loop in Java?",
+      "options": [
+        "To perform a conditional execution of code",
+        "To create a function",
+        "To define a variable",
+        "To iterate over a sequence of elements"
+      ],
+      "correct_answer": "To iterate over a sequence of elements"
+    },
+    {
+      "question": "How do you check the length of an array in Java?",
+      "options": [
+        "length(myArray)",
+        "myArray.length",
+        "count(myArray)",
+        "size(myArray)"
+      ],
+      "correct_answer": "myArray.length"
+    },
+    {
+      "question": "What is the purpose of the 'else' statement in Java?",
+      "options": [
+        "To create an alternative loop",
+        "To handle exceptions",
+        "To perform a block of code when the 'if' condition is not true",
+        "To define a variable"
+      ],
+      "correct_answer": "To perform a block of code when the 'if' condition is not true"
+    },
+    {
+      "question": "What is the output of the following code? `System.out.println(3 + '2');`",
+      "options": [
+        "5",
+        "32",
+        "Error",
+        "6"
+      ],
+      "correct_answer": "32"
+    },
+    {
+      "question": "What is the purpose of the 'return' statement in a method?",
+      "options": [
+        "To print a value to the console",
+        "To terminate the program",
+        "To return a value from a method",
+        "To create a loop"
+      ],
+      "correct_answer": "To return a value from a method"
+    },
+    {
+      "question": "How do you create an object in Java?",
+      "options": [
+        "object myObject = new Object();",
+        "Object myObject = createObject();",
+        "Object myObject = Object.create();",
+        "create Object myObject = new Object();"
+      ],
+      "correct_answer": "Object myObject = new Object();"
+    },
+    {
+      "question": "What is the purpose of the 'import' statement in Java?",
+      "options": [
+        "To include external libraries in the program",
+        "To print text to the console",
+        "To create a loop",
+        "To define a variable"
+      ],
+      "correct_answer": "To include external libraries in the program"
+    },
+    {
+      "question": "How do you handle exceptions in Java?",
+      "options": [
+        "try { /* code */ } catch(Exception e) { /* handle exception */ }",
+        "catch(Exception e) { /* handle exception */ } finally { /* cleanup code */ }",
+        "Both A and B",
+        "throw new Exception();"
+      ],
+      "correct_answer": "Both A and B"
+    },
+    {
+      "question": "What is the purpose of the 'new' keyword in Java?",
+      "options": [
+        "To create a new variable",
+        "To create a new method",
+        "To create a new object",
+        "To print text to the console"
+      ],
+      "correct_answer": "To create a new object"
+    }
+  ]
+  

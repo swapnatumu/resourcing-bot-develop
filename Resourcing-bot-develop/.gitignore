@@ -1,0 +1,32 @@
+# Node.js dependencies
+resourcing-bot-frontend/node_modules/
+resourcing-bot-backend/node_modules/
+
+# Python virtual environments
+resourcing-bot-model/venv/
+resourcing-bot-scheduling-screening/venv/
+
+# Python cache files
+**/__pycache__/
+*.pyc
+*.pyo
+
+# Docker-related files
+*.dockerignore
+Dockerfile
+docker-compose.yml
+
+# IDE and editor directories
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build output (if you build files outside Docker context)
+build/
+dist/

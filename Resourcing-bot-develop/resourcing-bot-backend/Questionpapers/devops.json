@@ -1,0 +1,153 @@
+[
+    {
+      "question": "Which DevOps practice helps to ensure that the code being deployed is reliable and functional across different environments?",
+      "options": [
+        "Continuous Integration",
+        "Continuous Deployment",
+        "Infrastructure as Code",
+        "Configuration Management"
+      ],
+      "correct_answer": "Continuous Integration"
+    },
+    {
+      "question": "What is the primary purpose of 'Infrastructure as Code' (IaC) in a DevOps pipeline?",
+      "options": [
+        "To automate the provisioning and management of infrastructure resources",
+        "To manage software dependencies and build processes",
+        "To monitor application performance",
+        "To handle version control of source code"
+      ],
+      "correct_answer": "To automate the provisioning and management of infrastructure resources"
+    },
+    {
+      "question": "What is a blue-green deployment strategy primarily used for?",
+      "options": [
+        "To ensure high availability during deployments",
+        "To manage different versions of software in the same environment",
+        "To roll back to a previous version in case of failure",
+        "To minimize downtime during deployments by maintaining two separate environments"
+      ],
+      "correct_answer": "To minimize downtime during deployments by maintaining two separate environments"
+    },
+    {
+      "question": "In the context of DevOps, what is the purpose of 'Continuous Monitoring'?",
+      "options": [
+        "To automate the deployment of code changes",
+        "To track the performance and health of applications and infrastructure",
+        "To manage source code repositories",
+        "To control the build and release process"
+      ],
+      "correct_answer": "To track the performance and health of applications and infrastructure"
+    },
+    {
+      "question": "Which of the following tools is typically used for configuration management in a DevOps pipeline?",
+      "options": [
+        "Jenkins",
+        "Puppet",
+        "Docker",
+        "Git"
+      ],
+      "correct_answer": "Puppet"
+    },
+    {
+      "question": "What does 'GitOps' refer to in the DevOps context?",
+      "options": [
+        "Using Git as a source of truth for managing Kubernetes configurations",
+        "Automating deployment processes using GitHub Actions",
+        "Versioning and managing Git repositories",
+        "Integrating Git with cloud service providers"
+      ],
+      "correct_answer": "Using Git as a source of truth for managing Kubernetes configurations"
+    },
+    {
+      "question": "What is the primary benefit of using 'Microservices' architecture in a DevOps environment?",
+      "options": [
+        "Increased complexity in system integration",
+        "Easier scaling and independent deployment of services",
+        "Simplified database management",
+        "Reduced need for monitoring and logging"
+      ],
+      "correct_answer": "Easier scaling and independent deployment of services"
+    },
+    {
+      "question": "Which of the following is a key characteristic of 'Continuous Deployment'?",
+      "options": [
+        "Automatic deployment of code changes to production after passing all tests",
+        "Manual deployment of code changes after successful build",
+        "Automated testing of code changes before merging into the main branch",
+        "Periodic deployment of code changes on a fixed schedule"
+      ],
+      "correct_answer": "Automatic deployment of code changes to production after passing all tests"
+    },
+    {
+      "question": "What is the purpose of 'Feature Flags' in a DevOps pipeline?",
+      "options": [
+        "To enable or disable features without deploying new code",
+        "To manage database schema changes",
+        "To automate the deployment process",
+        "To handle rollback of deployments"
+      ],
+      "correct_answer": "To enable or disable features without deploying new code"
+    },
+    {
+      "question": "Which of the following tools is commonly used for automated testing in a DevOps pipeline?",
+      "options": [
+        "Jenkins",
+        "Selenium",
+        "Terraform",
+        "Docker"
+      ],
+      "correct_answer": "Selenium"
+    },
+    {
+      "question": "In DevOps, what is 'Chaos Engineering' used for?",
+      "options": [
+        "To test the resilience and reliability of systems by intentionally introducing failures",
+        "To automate the creation of infrastructure resources",
+        "To manage configuration changes across multiple environments",
+        "To monitor system performance in real-time"
+      ],
+      "correct_answer": "To test the resilience and reliability of systems by intentionally introducing failures"
+    },
+    {
+      "question": "What does 'Immutable Infrastructure' mean in the context of DevOps?",
+      "options": [
+        "Infrastructure that is never modified after being deployed",
+        "Infrastructure that can be dynamically scaled based on demand",
+        "Infrastructure that uses mutable configuration files",
+        "Infrastructure that is updated with each deployment"
+      ],
+      "correct_answer": "Infrastructure that is never modified after being deployed"
+    },
+    {
+      "question": "Which DevOps practice helps in managing the dependencies of a software project?",
+      "options": [
+        "Continuous Integration",
+        "Dependency Management",
+        "Continuous Deployment",
+        "Infrastructure as Code"
+      ],
+      "correct_answer": "Dependency Management"
+    },
+    {
+      "question": "In a DevOps pipeline, what is the role of a 'Pipeline Orchestrator'?",
+      "options": [
+        "To automate and manage the sequence of steps in the CI/CD pipeline",
+        "To handle real-time monitoring of applications",
+        "To perform configuration management",
+        "To manage version control of source code"
+      ],
+      "correct_answer": "To automate and manage the sequence of steps in the CI/CD pipeline"
+    },
+    {
+      "question": "What is the benefit of using 'Containers' in a DevOps workflow?",
+      "options": [
+        "Portability and consistency across different environments",
+        "Reduced need for version control",
+        "Automatic scaling of applications",
+        "Enhanced database management"
+      ],
+      "correct_answer": "Portability and consistency across different environments"
+    }
+  ]
+  

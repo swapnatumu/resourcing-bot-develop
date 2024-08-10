@@ -1,0 +1,9 @@
+flask
+flask-bcrypt
+flask-cors
+pymongo
+python-dotenv
+google-auth
+google-api-python-client
+transformers
+flask-restful

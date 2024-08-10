@@ -1,0 +1,153 @@
+[
+    {
+      "question": "Explain the principles of Object-Oriented Programming (OOP) and how they are applied in Java.",
+      "options": [
+        "OOP emphasizes encapsulation, inheritance, and polymorphism.",
+        "OOP focuses on global variables and procedural programming.",
+        "OOP is not applicable to Java programming.",
+        "Both A and B."
+      ],
+      "correct_answer": "OOP emphasizes encapsulation, inheritance, and polymorphism."
+    },
+    {
+      "question": "Discuss the differences between the `final`, `finally`, and `finalize` keywords in Java.",
+      "options": [
+        "`final` is used to declare a constant, `finally` is used in exception handling, and `finalize` is a method in the Object class for garbage collection.",
+        "`final`, `finally`, and `finalize` are interchangeable keywords.",
+        "`final` is used for garbage collection, `finally` is used to declare constants, and `finalize` is used in exception handling.",
+        "There is no difference between these keywords in Java."
+      ],
+      "correct_answer": "`final` is used to declare a constant, `finally` is used in exception handling, and `finalize` is a method in the Object class for garbage collection."
+    },
+    {
+      "question": "Explain the purpose and usage of the Java `Stream` API. Provide an example.",
+      "options": [
+        "The `Stream` API is used for input/output operations in Java.",
+        "The `Stream` API is used for parallel processing in Java.",
+        "The `Stream` API is used for functional-style operations on streams of elements.",
+        "`Stream` API is not available in Java."
+      ],
+      "correct_answer": "The `Stream` API is used for functional-style operations on streams of elements."
+    },
+    {
+      "question": "What are lambda expressions in Java? Provide an example of their usage.",
+      "options": [
+        "Lambda expressions are used for creating threads in Java.",
+        "Lambda expressions are anonymous functions introduced in Java 8 for concise syntax.",
+        "Lambda expressions are used for database operations in Java.",
+        "Lambda expressions are not supported in Java."
+      ],
+      "correct_answer": "Lambda expressions are anonymous functions introduced in Java 8 for concise syntax."
+    },
+    {
+      "question": "Discuss the differences between method overloading and method overriding in Java.",
+      "options": [
+        "Method overloading is a compile-time polymorphism, and method overriding is a runtime polymorphism.",
+        "Method overloading is a runtime polymorphism, and method overriding is a compile-time polymorphism.",
+        "Method overloading and method overriding are the same concepts.",
+        "Java does not support method overloading and overriding."
+      ],
+      "correct_answer": "Method overloading is a compile-time polymorphism, and method overriding is a runtime polymorphism."
+    },
+    {
+      "question": "What is the purpose of the Java `ExecutorService` framework? How is it used for concurrent programming?",
+      "options": [
+        "`ExecutorService` is used for handling exceptions in Java.",
+        "`ExecutorService` is used for creating GUI components in Java.",
+        "`ExecutorService` is used for managing and controlling threads in a concurrent environment.",
+        "`ExecutorService` is not available in Java."
+      ],
+      "correct_answer": "`ExecutorService` is used for managing and controlling threads in a concurrent environment."
+    },
+    {
+      "question": "Explain the concept of dependency injection in Java. How is it implemented?",
+      "options": [
+        "Dependency injection is a technique for resolving circular dependencies in Java.",
+        "Dependency injection is a design pattern where the dependent objects receive their dependencies from an external source.",
+        "Dependency injection is specific to Java 9.",
+        "Dependency injection is not applicable to Java programming."
+      ],
+      "correct_answer": "Dependency injection is a design pattern where the dependent objects receive their dependencies from an external source."
+    },
+    {
+      "question": "Discuss the advantages and disadvantages of using the `synchronized` keyword for thread synchronization in Java.",
+      "options": [
+        "Advantages include simplicity in implementation, while disadvantages include potential performance bottlenecks.",
+        "There are no advantages or disadvantages to using the `synchronized` keyword in Java.",
+        "`synchronized` is only applicable to GUI programming in Java.",
+        "Advantages include low-level control of threads without any drawbacks."
+      ],
+      "correct_answer": "Advantages include simplicity in implementation, while disadvantages include potential performance bottlenecks."
+    },
+    {
+      "question": "Explain the purpose and usage of the Java `Reflection` API. Provide an example.",
+      "options": [
+        "`Reflection` is used for creating graphical user interfaces in Java.",
+        "`Reflection` is used for analyzing and manipulating classes, methods, and fields at runtime.",
+        "`Reflection` is specific to Java 7.",
+        "`Reflection` is not supported in Java."
+      ],
+      "correct_answer": "`Reflection` is used for analyzing and manipulating classes, methods, and fields at runtime."
+    },
+    {
+      "question": "What is the difference between the `Comparable` and `Comparator` interfaces in Java? Provide an example of each.",
+      "options": [
+        "`Comparable` is used for comparing objects, while `Comparator` is used for sorting collections.",
+        "`Comparable` and `Comparator` are interchangeable and have the same functionality.",
+        "`Comparable` is used for sorting collections, while `Comparator` is used for comparing objects.",
+        "`Comparable` and `Comparator` are not supported in Java."
+      ],
+      "correct_answer": "`Comparable` is used for comparing objects, while `Comparator` is used for sorting collections."
+    },
+    {
+      "question": "Discuss the concept of Java annotations. Provide examples of built-in annotations.",
+      "options": [
+        "Annotations are used for creating graphical user interfaces in Java.",
+        "Annotations are metadata added to Java code to convey additional information.",
+        "Java does not support annotations.",
+        "Annotations are specific to Java 6."
+      ],
+      "correct_answer": "Annotations are metadata added to Java code to convey additional information."
+    },
+    {
+      "question": "What is the purpose of the `try-with-resources` statement in Java? Provide an example.",
+      "options": [
+        "`try-with-resources` is used for handling exceptions in Java.",
+        "`try-with-resources` is used for automatic resource management, such as closing files or sockets.",
+        "`try-with-resources` is specific to Java 10.",
+        "`try-with-resources` is not supported in Java."
+      ],
+      "correct_answer": "`try-with-resources` is used for automatic resource management, such as closing files or sockets."
+    },
+    {
+      "question": "Explain the concept of design patterns in Java. Provide an example of a creational design pattern.",
+      "options": [
+        "Design patterns are used for creating user interfaces in Java.",
+        "Design patterns are reusable solutions to common problems in software design.",
+        "Java does not support design patterns.",
+        "Design patterns are specific to Java 5."
+      ],
+      "correct_answer": "Design patterns are reusable solutions to common problems in software design."
+    },
+    {
+      "question": "What is the purpose of the Java `Nashorn` engine? Provide an example of its usage.",
+      "options": [
+        "`Nashorn` engine is used for database operations in Java.",
+        "`Nashorn` engine is used for executing JavaScript code in Java applications.",
+        "`Nashorn` engine is specific to Java 11.",
+        "`Nashorn` engine is not available in Java."
+      ],
+      "correct_answer": "`Nashorn` engine is used for executing JavaScript code in Java applications."
+    },
+    {
+      "question": "Discuss the advantages and disadvantages of using the `volatile` keyword in Java for thread safety.",
+      "options": [
+        "Advantages include ensuring visibility of changes across threads, while disadvantages include a potential performance impact.",
+        "`volatile` keyword is not used for thread safety in Java.",
+        "There are no advantages or disadvantages to using the `volatile` keyword in Java.",
+        "Advantages include fine-grained locking without any drawbacks."
+      ],
+      "correct_answer": "Advantages include ensuring visibility of changes across threads, while disadvantages include a potential performance impact."
+    }
+  ]
+  

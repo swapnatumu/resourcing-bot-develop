@@ -1,0 +1,153 @@
+[
+    {
+      "question": "What is the primary advantage of using a Real-Time Operating System (RTOS) in embedded systems?",
+      "options": [
+        "Increased computational power",
+        "Improved multitasking with deterministic timing",
+        "Lower power consumption",
+        "Simpler development environment"
+      ],
+      "correct_answer": "Improved multitasking with deterministic timing"
+    },
+    {
+      "question": "Which communication protocol is most commonly used for low-speed, short-distance communication in embedded systems?",
+      "options": [
+        "CAN (Controller Area Network)",
+        "I2C (Inter-Integrated Circuit)",
+        "UART (Universal Asynchronous Receiver-Transmitter)",
+        "SPI (Serial Peripheral Interface)"
+      ],
+      "correct_answer": "I2C (Inter-Integrated Circuit)"
+    },
+    {
+      "question": "What is the purpose of a Watchdog Timer in an embedded system?",
+      "options": [
+        "To monitor the system's power consumption",
+        "To reset the system in case of a software fault or hang",
+        "To control the system's clock frequency",
+        "To manage communication between peripherals"
+      ],
+      "correct_answer": "To reset the system in case of a software fault or hang"
+    },
+    {
+      "question": "What does DMA (Direct Memory Access) allow in an embedded system?",
+      "options": [
+        "Direct memory access without CPU intervention for data transfers",
+        "Direct access to peripheral registers without using interrupts",
+        "Access to multiple memory types in a system",
+        "Direct control of CPU execution flow"
+      ],
+      "correct_answer": "Direct memory access without CPU intervention for data transfers"
+    },
+    {
+      "question": "Which of the following is an important consideration when designing low-power embedded systems?",
+      "options": [
+        "Increasing the clock speed",
+        "Optimizing memory usage",
+        "Minimizing interrupt handling",
+        "Managing power modes and sleep states"
+      ],
+      "correct_answer": "Managing power modes and sleep states"
+    },
+    {
+      "question": "In embedded systems, what is the role of an interrupt controller?",
+      "options": [
+        "To manage memory allocation for processes",
+        "To prioritize and handle multiple interrupt requests",
+        "To configure the CPU clock frequency",
+        "To handle communication between different peripherals"
+      ],
+      "correct_answer": "To prioritize and handle multiple interrupt requests"
+    },
+    {
+      "question": "Which type of memory is non-volatile and often used for storing firmware in embedded systems?",
+      "options": [
+        "RAM (Random Access Memory)",
+        "ROM (Read-Only Memory)",
+        "Cache Memory",
+        "Registers"
+      ],
+      "correct_answer": "ROM (Read-Only Memory)"
+    },
+    {
+      "question": "What is the primary purpose of using an FPGA (Field-Programmable Gate Array) in embedded systems?",
+      "options": [
+        "To perform high-speed mathematical computations",
+        "To enable custom hardware acceleration and parallel processing",
+        "To replace microcontrollers in all applications",
+        "To simplify software development"
+      ],
+      "correct_answer": "To enable custom hardware acceleration and parallel processing"
+    },
+    {
+      "question": "Which protocol is best suited for real-time data transmission over a network in embedded systems?",
+      "options": [
+        "TCP (Transmission Control Protocol)",
+        "UDP (User Datagram Protocol)",
+        "HTTP (Hypertext Transfer Protocol)",
+        "FTP (File Transfer Protocol)"
+      ],
+      "correct_answer": "UDP (User Datagram Protocol)"
+    },
+    {
+      "question": "In embedded systems, what is the purpose of 'Bootloader' software?",
+      "options": [
+        "To handle communication with external devices",
+        "To initialize hardware and load the main application firmware",
+        "To manage user interface interactions",
+        "To perform high-speed data processing"
+      ],
+      "correct_answer": "To initialize hardware and load the main application firmware"
+    },
+    {
+      "question": "What is the key difference between microcontrollers and microprocessors in embedded systems?",
+      "options": [
+        "Microcontrollers have built-in peripherals while microprocessors do not",
+        "Microprocessors are used in real-time applications while microcontrollers are not",
+        "Microcontrollers offer higher processing power than microprocessors",
+        "Microprocessors are generally more cost-effective than microcontrollers"
+      ],
+      "correct_answer": "Microcontrollers have built-in peripherals while microprocessors do not"
+    },
+    {
+      "question": "Which technique is used to reduce electromagnetic interference (EMI) in embedded system designs?",
+      "options": [
+        "Increasing the clock frequency",
+        "Using shielding and filtering techniques",
+        "Reducing the number of peripheral devices",
+        "Increasing the power supply voltage"
+      ],
+      "correct_answer": "Using shielding and filtering techniques"
+    },
+    {
+      "question": "Which of the following is a common method for debugging embedded systems?",
+      "options": [
+        "Using a JTAG (Joint Test Action Group) interface",
+        "Employing a real-time operating system",
+        "Utilizing software simulation",
+        "Increasing the CPU clock speed"
+      ],
+      "correct_answer": "Using a JTAG (Joint Test Action Group) interface"
+    },
+    {
+      "question": "What is 'context switching' in the context of an RTOS (Real-Time Operating System)?",
+      "options": [
+        "The process of switching between different modes of the CPU",
+        "The process of saving and restoring the state of a task during multitasking",
+        "The technique of managing memory allocation",
+        "The method of optimizing the system's power consumption"
+      ],
+      "correct_answer": "The process of saving and restoring the state of a task during multitasking"
+    },
+    {
+      "question": "What is the primary function of 'I/O Ports' in microcontrollers?",
+      "options": [
+        "To manage communication between the microcontroller and peripherals",
+        "To increase the clock frequency of the microcontroller",
+        "To provide additional memory storage",
+        "To handle network communication protocols"
+      ],
+      "correct_answer": "To manage communication between the microcontroller and peripherals"
+    }
+  ]
+  
