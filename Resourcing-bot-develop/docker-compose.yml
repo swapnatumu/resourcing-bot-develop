@@ -1,0 +1,117 @@
+version: '3.8'
+
+services:  
+  backend:
+    image: swapnatumu/botfrontend:latest
+    # build: ./resourcing-bot-backend
+    ports:
+      - "3001:3001" # Expose port 3001 on the host and link to port 3001 in the container
+    environment:
+      # - MONGO_URI=mongodb://172.18.0.1:27017/resourcing_bot_db
+      # - MONGO_URI=mongodb://10.10.2.109:27017/resourcing_bot_db     
+      - MONGO_URI=mongodb://127.0.0.1:27017/resourcing_bot_db  
+      - QUESTIONS_FOLDER_PATH=/app/Questionpapers
+    networks:
+      - app-network
+    volumes:
+      - ../Resourcing-bot-develop/resourcing-bot-backend/Questionpapers
+  model:
+    image: swapnatumu/botbackend:latest
+    # build: ./resourcing-bot-model
+    ports:
+      - "5005:5005"
+    environment:
+      - OPENAI_API_KEY=sk-proj-rUKdiWDpwf8FJfALil7TT3BlbkFJgaL60dZDkDRguuIN9qyP
+      - RESUME_PATH=/app/docs
+    networks:
+      - app-network
+    volumes:
+      - ../Resourcing-bot-develop/resourcing-bot-model/resumes
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 60G
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 4
+              capabilities: [gpu]
+  screeningscheduling:
+    image: swapnatumu/botscreening:latest
+    # build: ./resourcing-bot-scheduling-screening
+    ports:
+      - "8081:8081" # Expose port 3001 on the host and link to port 3001 in the container
+      - "3004:3004" 
+      - "5002:5002" 
+ 
+    environment:
+      # - MONGO_URI=mongodb://172.18.0.1:27017/resourcing_bot_db
+      # - MONGO_DB_URI=mongodb://172.18.0.1:27017/
+      # - MONGO_URI=mongodb://10.10.2.109:27017/resourcing_bot_db
+      # - MONGO_DB_URI=mongodb://10.10.2.109:27017/
+      - MONGO_URI=mongodb://127.0.0.1:27017/resourcing_bot_db
+      - MONGO_DB_URI=mongodb://127.0.0.1:27017/
+    networks:
+      - app-network
+  frontend:
+    image: swapnatumu/botmodel:latest
+    # build: ./resourcing-bot-frontend
+    ports:
+      - "3000:3000" # Expose port 3000 on the host and link to port 3000 in the container
+    environment:
+      - REACT_APP_REGISTER_API=http://10.10.1.46:3001/api/register
+      - REACT_APP_LOGIN_API=http://10.10.1.46:3001/api/login
+      - REACT_APP_LOGOUT_API=http://10.10.1.46:3001/api/logout
+      - REACT_APP_FORGOT_PASSWORD_API=http://10.10.1.46:3001/api/forgotpassword
+      - REACT_APP_RESET_PASSWORD_API=http://10.10.1.46:3001/api/resetpassword
+      - REACT_APP_GET_RECRUITERS_INTERVIEWERS_API=http://10.10.1.46:3001/api/getRecruitersAndInterviewers
+      - REACT_APP_CREATE_JOB_API=http://10.10.1.46:3001/api/createJobDescription
+      - REACT_APP_RETRIEVE_ACCEPTED_RESUMES_API=http://10.10.1.46:3001/api/retrieveacceptedresumes
+      - REACT_APP_CHECK_ACCEPTED_RESUME_API=http://10.10.1.46:3001/api/checkAcceptedResume
+      - REACT_APP_REJECT_RESUME_API=http://10.10.1.46:3001/api/rejectResume
+      - REACT_APP_DELETE_JD_API=http://10.10.1.46:3001/api/delete
+      - REACT_APP_EDIT_JD_API=http://10.10.1.46:3001/api/edit
+      - REACT_APP_UPLOAD_SCREENING_TEST_API=http://10.10.1.46:3001/api/uploadScreeningTest
+      - REACT_APP_SCREENING_TEST_API=http://10.10.1.46:5008/screening_test_email
+      - REACT_APP_SCEDULING_BUTTON_API=http://10.10.1.46:3001/api/scheduling_button
+      - REACT_APP_APPROVE_USER_API=http://10.10.1.46:3001/api/approveUser
+      - REACT_APP_LOCAL_HOST_API=http://10.10.1.46:3000/
+      - REACT_APP_SEND_EMAIL_API=http://10.10.1.46:3004/sendEmail
+      - REACT_APP_ARCHIVE_JDS_API=http://10.10.1.46:3001/api/inactive-jds
+      - REACT_APP_FEEDBACK_API=http://10.10.1.46:3004/feedback
+      - REACT_APP_FETCH_JDS_API=http://10.10.1.46:3001/api/fetchJds?email
+      - REACT_APP_GET_STATUS_RESULTS_API=http://10.10.1.46:3001/api/getStatusResults
+      - REACT_APP_GET_PDF_API=http://10.10.1.46:5005/get_pdf?fileName
+      - REACT_APP_FETCH_INTERVIEWERS_API=http://10.10.1.46:3001/api/interviewer
+      - REACT_APP_SCHEDULE_API=http://10.10.1.46:3004/schedule
+      - REACT_APP_REJECT_USER_API=http://10.10.1.46:3001/api/rejectUser
+      - REACT_APP_EXTRACT_JOB_DETAILS_API=http://10.10.1.46:5005/extract_job_details
+      - REACT_APP_GOOGLE_CLIENT_ID=320668170244-e1pjdbp6jpbutb6vppmr32tvna8t74ak.apps.googleusercontent.com
+      - REACT_APP_SOCIAL_LOGIN_API=http://10.10.1.46:3001/api/socialmedialogin
+      - REACT_APP__RECRUITER_RESUMEPROCESS_API=http://10.10.1.46:3001/api/processResume
+      - REACT_APP__UPDATE_PROFILE_API=http://10.10.1.46:3001/api/updateProfile
+      - REACT_APP__CHANGE_PASSWORD_API=http://10.10.1.46:3001/api/changePassword
+      - REACT_APP__CANDIDATE_PROFILE_API=http://10.10.1.46:3001/api/candidateProfiles      
+      - REACT_APP_GET_SCHEDULED_INTERVIEWS_API=http://10.10.1.46:3001/api/getScheduledInterviewsByInterviewerEmail
+      - REACT_APP_CANDIDATE_PROFILE_BY_JDID_API=http://10.10.1.46:3001/api/get_candidate_profiles_by_jdID
+      - REACT_APP_GET_CANDIDATE_PROFILE_DATA_API=http://10.10.1.46:3001/api/candidateProfileDataButton
+      - REACT_APP_CREATE_CANDIDATE_API=http://10.10.1.46:3001/api/createCandidate
+      - REACT_APP_PARSE_JD_PDF_API=http://10.10.1.46:5005/parseJDPDF
+      - REACT_APP_SCHEDULED_CANDIDATE_DETAILS_API=http://10.10.1.46:3001/api/scheduledcandidatesdetails 
+      - REACT_APP__GET_INTERVIEWER_BY_INTERVIEWER_EMAIL_API=http://10.10.1.46:3001/api/getInterviewsByInterviewerEmail 
+      - REACT_APP_SCREENING_ID_API= http://10.10.1.46:3001/api/screening
+      - REACT_APP_UPDATE_PROFILE_API=http://10.10.1.46:3001/api/updateProfile
+      - REACT_APP_CHANGE_PASSWORD_API=http://10.10.1.46:3001/api/changePassword
+      
+
+    networks:
+      - app-network
+    depends_on:
+      - backend
+      - model
+      - screeningscheduling  # Ensures backend starts first since frontend may depend on it
+
+networks:
+  app-network:
+    driver: bridge
